@@ -1,4 +1,79 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+@font-face {
+  font-family: "alice";
+  src: url("../../fonts/Alice_in_Wonderland_3.ttf");
+}
+@font-face {
+  font-family: "just";
+  src: url("../../fonts/Just.ttf");
+}
+body {
+  background-image: url("../../img/inicio.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+section {
+  margin: 10vw 20vw;
+}
+
+.intro {
+  margin: 3% 0;
+}
+
+h1 {
+  font-size: 4vw;
+  font-family: "alice";
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+h3 {
+  font-size: 2vw;
+  font-family: "just";
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+input {
+  border: none;
+  padding-left: 0.5vw;
+  opacity: 50%;
+  background-color: #b4217a;
+  color: white;
+  height: 3vw;
+  width: 40%;
+}
+input:hover {
+  filter: drop-shadow(0.1em 0.1em 0.2em #5339a4);
+}
+input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+input::-moz-placeholder {
+  color: white;
+}
+input::placeholder {
+  color: white;
+}
+
+button {
+  background-color: #b4217a;
+  color: white;
+  font-family: "just";
+  font-size: 1.5vw;
+  border: none;
+  height: 3.05vw;
+  width: 10%;
+}
+button:hover {
+  cursor: pointer;
+  filter: drop-shadow(0.1em 0.1em 0.2em #5339a4);
 }/*# sourceMappingURL=index.css.map */

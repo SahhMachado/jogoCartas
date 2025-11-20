@@ -2,3 +2,93 @@
     padding: 0;
     margin: 0;
 }
+
+$title: white;
+$background: #b4217a;
+$shadow: #5339a4;
+
+@font-face {
+    font-family: "alice";
+    src: url("../../fonts/Alice_in_Wonderland_3.ttf");
+}
+
+@font-face {
+    font-family: "just";
+    src: url("../../fonts/Just.ttf");
+}
+
+@mixin text(){
+    color: $title;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+@mixin hover(){
+    -webkit-filter: drop-shadow(0.1em 0.1em 0.2em $shadow); 
+    filter: drop-shadow(0.1em 0.1em 0.2em $shadow); 
+}
+
+body{
+    background-image: url("../../img/inicio.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+}
+
+section{
+    margin: 10vw 20vw;
+}
+
+.intro{
+    margin: 3% 0;
+}
+
+h1{
+    font-size: 4vw;
+    font-family: 'alice';
+    @include text();
+}
+
+h3{
+    font-size: 2vw;
+    font-family: 'just';
+    @include text();
+    // margin: 0 0 2vh 0;
+}
+
+input{
+    border: none;
+    padding-left: 0.5vw;
+    opacity: 50%;
+    background-color: $background;
+    color: $title;
+    height: 3vw;
+    width: 40%;
+
+    &:hover{
+        @include hover();
+    }
+
+    &:focus{
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+
+    &::placeholder{
+        color: $title;
+    }
+}
+
+button{
+    background-color: $background;
+    color: $title;
+    font-family: 'just';
+    font-size: 1.5vw;
+    border: none;
+    height: 3.05vw;
+    width: 10%;
+
+    &:hover{
+        cursor: pointer;
+        @include hover();
+    }
+}
