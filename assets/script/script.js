@@ -35,7 +35,7 @@ function mostrarCartasJ(numeros, naipe, nome){
   cartas.innerHTML = ""// limpa antes
   nomeJogador.innerHTML = ""// limpa antes
 
-  nomeJogador.innerHTML += `<p class='resultado'>${nome}</p><br>`
+  nomeJogador.innerHTML += `<p class='resultado' style='margin: 2vh 0;'>${nome}</p>`
 
   //vai mapear os ícones possíveis
   const icones = {
@@ -64,7 +64,7 @@ function mostrarCartasJ(numeros, naipe, nome){
     cartas.innerHTML += `
 
     <div class='resultado'>
-      <div style='background-color: #d1d1d1; padding: 5px; height: 100px; width: 70px; border-radius: 8px; color: #b421799f; font-weight: bold;'>
+      <div style='background-color: #d1d1d1; padding: 5px; height: 12vh; width: 4vw; border-radius: 8px; color: #b421799f; font-weight: bold;'>
 
         ${numero}<br>
         <center><img src='assets/img/${icone}' style='margin: 12px 0;'></img></center>
@@ -124,7 +124,7 @@ function mostrarCartasC(numeros, naipe){
   cartas.innerHTML = ""// limpa antes
   nomeJogador.innerHTML = ""// limpa antes
 
-  nomeJogador.innerHTML += `<p class='resultado'>Computador</p><br>`
+  nomeJogador.innerHTML += `<p style='margin: 3vh 0 0 0;'>Computador</p>`
 
   //vai mapear os ícones possíveis
   const icones = {
@@ -153,7 +153,7 @@ function mostrarCartasC(numeros, naipe){
     cartas.innerHTML += `
 
     <div class='resultado'>
-      <div style='background-color: #d1d1d1; padding: 5px; height: 100px; width: 70px; border-radius: 8px; color: #b421799f; font-weight: bold;'>
+      <div style='background-color: #d1d1d1; padding: 5px; height: 12vh; width: 4vw; border-radius: 8px; color: #b421799f; font-weight: bold;'>
 
         <p style='float: left;'>${numero}<p><br>
         <center><img src='assets/img/${icone}' style='margin: 12px 0;'></img></center>
@@ -188,7 +188,7 @@ function mostrarCartasPopup(numeros, naipe, nome){
   cartas.innerHTML = ""// limpa antes
   nomeJogador.innerHTML = ""// limpa antes
 
-  nomeJogador.innerHTML += `<p class='resultado'>${nome}</p><br>`
+  nomeJogador.innerHTML += `<p>${nome}</p>`
 
   //vai mapear os ícones possíveis
   const icones = {
@@ -217,7 +217,7 @@ function mostrarCartasPopup(numeros, naipe, nome){
     cartas.innerHTML += `
 
     <div class='resultado'>
-      <div style='background-color: #d1d1d1; padding: 5px; height: 100px; width: 70px; border-radius: 8px; color: #b421799f; font-weight: bold;'>
+      <div style='background-color: #d1d1d1; padding: 5px; height: 12vh; width: 4vw; border-radius: 8px; color: #b421799f; font-weight: bold;'>
 
         ${numero}<br>
         <center><img src='assets/img/${icone}' style='margin: 12px 0;'></img></center>
