@@ -4,52 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/pag2/pag2.css">
+    <link rel="stylesheet" href="assets/css/pag2/index2.css">
     <title>Jogo de Cartas</title>
 </head>
 <body>
-     <!-- <audio autoplay="autoplay">
-        <source src="assets/songs/alice-in-dark-wonderland-123894.mp3" type="audio/mp3">
-        seu navegador não suporta HTML5
-    </audio> -->
-
-    <section>
-
+    <section class="container">
         <div class="card">
-            <form action="" method="post">
-                <label for="naipe">Naipes:</label><br><br>
-                <input type="radio" required name="naipe" id="naipe" value="ouro"> Ouro <br>
-                <input type="radio" required name="naipe" id="naipe" value="copas"> Copas <br>
-                <input type="radio" required name="naipe" id="naipe" value="paus"> Paus <br>
-                <input type="radio" required name="naipe" id="naipe" value="espadas"> Espadas <br><br>
+            <label for="naipe">Naipes:</label><br><br>
+            <input type="radio" required name="naipe" id="naipe" value="Ouros" checked> Ouros <br>
+            <input type="radio" required name="naipe" id="naipe" value="Copas"> Copas <br>
+            <input type="radio" required name="naipe" id="naipe" value="Paus"> Paus <br>
+            <input type="radio" required name="naipe" id="naipe" value="Espadas"> Espadas <br><br>
 
 
-                <label for="num">Número de Cartas:</label><br><br>
-                <select name="num" id="num" class="opc">
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                </select>
+            <label for="num">Número de Cartas:</label><br><br>
+            <select name="num" id="num" class="opc">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
                 
-                <br><br><br>
+            <br><br><br>
             
-                <button type="submit" name="acao" id="acao" value="sortear" class="btn">Sortear</button>
-            </form>
+            <button  type="button" name="acao" id="acao" value="sortear" class="btn" onclick="sorteioJ()">Sortear</button>
+            <button type="button" name="acao" id="acao" value="jogar" class="btn2">Jogar</button>
+
+            <br><br><br>
+
+            <div id="resultado" class="resultado"></div>
 
             <br>
-
-            <form action="" method="post">
-                <button type="submit" name="acao" id="acao" value="jogar" class="btn">Jogar</button>
-            </form>
-
-            <br><br>
 
             <a href="index.html"><img src="assets/img/seta.svg" alt="" id="back" class="seta"></a>
         </div>
     </section>
 
     <script src="assets/script/script.js"></script>
+    <style>
+        #resultado {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            gap: 5px;
+            justify-content: center;
+        }
+    </style>
 </body>
 </html>
