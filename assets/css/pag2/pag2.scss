@@ -1,7 +1,6 @@
 *{
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 $title: white;
@@ -36,16 +35,19 @@ body{
     @include center()
 }
 
+//section
 .container{
     background-color: $background2;
     height: 100vh;
     width: 40vw;  
 }
 
+//div com os campos e cartas
 .card{
     margin: 5% 10%;
 }
 
+//select 
 .opc{
     width: 100%;
     height: 3vh;
@@ -58,11 +60,13 @@ body{
     }
 }
 
+//labels
 label{
     font-family: "alice";
     font-size: 5vh;
 }
 
+//botão sortear
 .btn{
     border: none;
     height: 3vw;
@@ -80,6 +84,7 @@ label{
     }
 }
 
+//botão jogar
 .btn2{
     border: none;
     height: 3vw;
@@ -98,6 +103,7 @@ label{
     }
 }
 
+//botão de voltar
 .seta{
     width: 3vw;
     margin: 4vw 0;

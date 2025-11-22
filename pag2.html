@@ -4,8 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/pag2/index2.css">
+    <link rel="stylesheet" href="assets/css/pag2/pag2.css">
     <title>Jogo de Cartas</title>
+    <style>
+        .resultado {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        /* fundo escuro */
+        .popup{
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000bb;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* quadrado central */
+        .popup-content{
+            background: #b421798c;
+            color: #d1d1d1;
+            padding: 20px;
+            border-radius: 12px;
+            width: 30%;
+            height: 60%;
+            text-align: center;
+            box-shadow: 0 0 15px #0004;
+            animation: popup 0.3s ease;
+        }
+
+         /* fundo escuro do aviso */
+        .aviso{
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000bb;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* quadrado central do aviso*/
+        .aviso-content{
+            background: #b42179a9;
+            color: #d1d1d1;
+            padding: 20px;
+            border-radius: 12px;
+            width: 20%;
+            height: 25%;
+            text-align: center;
+            box-shadow: 0 0 15px #0004;
+            animation: popup 0.3s ease;
+            font-size: 2vw;
+        }
+
+        .aviso-content > p{
+            margin: 20% 0 10% 0;
+        }
+
+        .aviso-content > button{
+            padding: 6px 16px;
+            border: none;
+            background: #b42179;
+            color: #d1d1d1;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'alice';
+            font-size: 1.5vw;
+        }
+
+        .aviso-content > button:hover{
+            transform: scale(1.1);
+        }
+
+        @keyframes popup{
+            from { transform: scale(0.8); opacity: 0; }
+            to   { transform: scale(1); opacity: 1; }
+        }   
+
+        /* botão fechar */
+        .close{
+            float: right;
+            font-size: 5vw;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <section class="container">
@@ -29,12 +124,13 @@
             <br><br><br>
             
             <button  type="button" name="acao" id="acao" value="sortear" class="btn" onclick="sorteioJ()">Sortear</button>
-            <button type="button" name="acao" id="acao" value="jogar" class="btn2">Jogar</button>
+            <button type="button" name="acao" id="acao" value="jogar" class="btn2" onclick="jogarCartas()">Jogar</button>
 
             <br><br><br>
-
+            
+            <p id="jogador"></p>
             <div id="resultado" class="resultado"></div>
-
+            
             <br>
 
             <a href="index.html"><img src="assets/img/seta.svg" alt="" id="back" class="seta"></a>
@@ -42,16 +138,30 @@
     </section>
 
     <script src="assets/script/script.js"></script>
-    <style>
-        #resultado {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            gap: 5px;
-            justify-content: center;
-        }
-    </style>
+    <!-- POPUP (escondido no inicio) -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="fechar" class="close" onclick="fechar()">&times;</span>
+
+            <p id="jogadorPopup"></p>
+            <div id="resultadoPopup" class="resultado"></div>
+
+            <br>
+
+            <p id="jogadorPopup2"></p>
+            <div id="resultadoPopup2" class="resultado"></div>
+
+            <div id="soma"></div>
+            <h2 id="vencedor"></h2>
+        </div>
+    </div>
+
+    <!-- AVISO (escondido no inicio) -->
+    <div id="aviso" class="aviso">
+        <div class="aviso-content">
+            <p>Sorteie suas cartas antes de jogar!</p>
+            <button id="fecharAviso" onclick="fecharAviso()">OK</button>
+        </div>
+    </div>
 </body>
 </html>
